@@ -792,6 +792,7 @@ module.exports = builder.getInterface()
 
 // Also serve locally for development
 if (require.main === module) {
-  serveHTTP(builder.getInterface(), { port: 7071 })
-  console.log("Stremio add-on is running on http://localhost:7071/manifest.json")
+  const port = process.env.PORT || 7071
+  serveHTTP(builder.getInterface(), { port: port })
+  console.log(`Stremio add-on is running on http://localhost:${port}/manifest.json`)
 }
