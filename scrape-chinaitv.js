@@ -66,7 +66,7 @@ async function scrapeAndMerge() {
   try {
     currentDb = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   } catch (e) {
-    console.log('Creating new database...');
+    console.log('[Creating new database...]');
   }
 
   const newData = { ...currentDb };
@@ -74,7 +74,7 @@ async function scrapeAndMerge() {
 
   for (const { country, file } of countryFiles) {
     try {
-      console.log(`Fetching ${country}...`);
+      console.log(`[Fetching ${country}...]`);
       const url = BASE_URL + file;
       const content = await fetchFile(url);
       const streams = parseM3U(content, country);
@@ -82,17 +82,17 @@ async function scrapeAndMerge() {
       if (streams.length > 0) {
         newData[country] = streams;
         addedCount += streams.length;
-        console.log(`✓ ${country}: ${streams.length} channels`);
+        console.log(`[${country}: ${streams.length} channels]`);
       }
     } catch (error) {
-      console.log(`✗ ${country}: ${error.message}`);
+      console.log(`[ERROR ${country}: ${error.message}]`);
     }
   }
 
   // Save updated database
   fs.writeFileSync(dbPath, JSON.stringify(newData, null, 2));
   
-  console.log(`\n✓ Complete!`);
+  console.log(`\n[Complete]`);
   console.log(`Total countries: ${Object.keys(newData).length}`);
   console.log(`Total channels added: ${addedCount}`);
 }

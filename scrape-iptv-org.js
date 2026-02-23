@@ -120,7 +120,7 @@ const countryNames = {
 
 async function scrapeIPTVOrg() {
   try {
-    console.log('Starting iptv-org scraping...\n');
+    console.log('[Starting iptv-org scraping...]\n');
 
     // Fetch all data
     const [streams, channels, logos, countries] = await Promise.all([
@@ -130,9 +130,9 @@ async function scrapeIPTVOrg() {
       fetchJSON(`${API_BASE}/countries.json`),
     ]);
 
-    console.log(`\n✓ Fetched ${streams.length} streams`);
-    console.log(`✓ Fetched ${channels.length} channels`);
-    console.log(`✓ Fetched ${logos.length} logos`);
+    console.log(`\n[Fetched ${streams.length} streams]`);
+    console.log(`[Fetched ${channels.length} channels]`);
+    console.log(`[Fetched ${logos.length} logos]`);
 
     // Create lookup maps
     const channelMap = {};
@@ -198,7 +198,7 @@ async function scrapeIPTVOrg() {
         mergedDB[country] = newStreams;
       }
       
-      console.log(`✓ ${country}: ${uniqueNew.length} new streams (${mergedDB[country].length} total)`);
+      console.log(`[${country}: ${uniqueNew.length} new streams (${mergedDB[country].length} total)]`);
       totalAdded += uniqueNew.length;
     });
 
@@ -212,7 +212,7 @@ async function scrapeIPTVOrg() {
       .filter(s => s.logo)
       .length;
 
-    console.log(`\n📊 Database Updated:`);
+    console.log(`\n[Database Updated]`);
     console.log(`   Total countries: ${totalCountries}`);
     console.log(`   Total streams: ${totalStreams}`);
     console.log(`   With logos: ${withLogos}`);
