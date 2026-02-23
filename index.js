@@ -724,12 +724,27 @@ builder.defineCatalogHandler(async ({ type, id, extra }) => {
   
   if (type === "tv" && id === "countries") {
     try {
-      const metas = ALL_COUNTRIES.map((countryName, index) => ({
-        id: `country_${index}`,
-        type: "tv",
-        name: countryName,
-        poster: `https://via.placeholder.com/350x500?text=${encodeURIComponent(countryName)}`
-      }))
+      const metas = ALL_COUNTRIES.map((countryName, index) => {
+        // Try to get a logo from the first channel in this country
+        let poster = null
+        const countryStreams = COUNTRY_STREAMS_DB[countryName] || []
+        if (countryStreams.length > 0) {
+          // Use first available logo, or fallback
+          for (const stream of countryStreams) {
+            if (stream.logo) {
+              poster = stream.logo
+              break
+            }
+          }
+        }
+        
+        return {
+          id: `country_${index}`,
+          type: "tv",
+          name: countryName,
+          poster: poster || `https://via.placeholder.com/350x500?text=${encodeURIComponent(countryName)}`
+        }
+      })
       
       console.log(`Returning ${metas.length} countries`)
       return { metas }
