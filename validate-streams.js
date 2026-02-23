@@ -4,22 +4,23 @@ const http = require('http');
 
 const STREAMS_DB = 'streams-database.json';
 const RESULTS_FILE = 'stream-validation-results.json';
-const PARALLEL_CHECKS = 10; // Check 10 streams simultaneously
-const TIMEOUT = 8000; // 8 second timeout per stream
+const PARALLEL_CHECKS = 8; // Check 8 streams simultaneously  
+const TIMEOUT = 7000; // 7 second timeout per stream
 const MAX_STREAMS_PER_COUNTRY = null; // null = check all, or set number to test subset
 
 // Test if a stream URL is accessible
 function testStream(url) {
   return new Promise((resolve) => {
-    const checkUrl = (protocol) => {
+    try {
+      const protocol = url.startsWith('https') ? https : http;
       const options = {
         method: 'HEAD',
         timeout: TIMEOUT,
       };
 
       const req = protocol.request(url, options, (res) => {
+        req.destroy();
         if (res.statusCode >= 200 && res.statusCode < 400) {
-          req.abort();
           resolve({ status: 'working', code: res.statusCode });
         } else {
           resolve({ status: 'failed', code: res.statusCode });
@@ -27,20 +28,18 @@ function testStream(url) {
       });
 
       req.on('timeout', () => {
-        req.abort();
+        req.destroy();
         resolve({ status: 'timeout' });
       });
 
-      req.on('error', (err) => {
-        resolve({ status: 'error', error: err.code || err.message });
+      req.on('error', () => {
+        req.destroy();
+        resolve({ status: 'error' });
       });
-    };
 
-    try {
-      const protocol = url.startsWith('https') ? https : http;
-      checkUrl(protocol);
+      req.end();
     } catch (e) {
-      resolve({ status: 'error', error: e.message });
+      resolve({ status: 'error' });
     }
   });
 }
@@ -124,8 +123,8 @@ async function validateStreams() {
         if (stats.tested % 50 === 0) {
           const percent = Math.round((stats.tested / stats.totalStreams) * 100);
           const working = Math.round((stats.working / stats.tested) * 100);
-          process.stdout.write(
-            `\r[Progress: ${percent}% | Working: ${working}% (${stats.working}/${stats.tested})]`
+          console.log(
+            `[Progress: ${percent}% | Working: ${working}% (${stats.working}/${stats.tested})]`
           );
         }
       });
