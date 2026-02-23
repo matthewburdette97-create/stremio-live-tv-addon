@@ -10448,5 +10448,15 @@
       "title": "KCTV",
       "url": "https://tor.koryo.tv/hls/pl/78efc3f10ca2ec33c5477b5e51d1e29b.m3u8"
     }
+  ],
+  "South Korea": [
+    {
+      "title": "ABN TV",
+      "url": "https://vod2.abn.co.kr/IPHONE/abn.m3u8"
+    },
+    {
+      "title": "TBS Seoul",
+      "url": "https://media.joycorp.co.kr:4443/live/ngrp:live_all/playlist.m3u8"
+    }
   ]
 }
