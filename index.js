@@ -708,8 +708,26 @@ try {
   COUNTRY_STREAMS_DB = DEFAULT_STREAMS
 }
 
+// Enrich all streams with genre information
+COUNTRY_STREAMS_DB = enrichStreamsWithGenre(COUNTRY_STREAMS_DB)
+
 // List of all available countries
 const ALL_COUNTRIES = Object.keys(COUNTRY_STREAMS_DB).sort()
+
+// Get available genres for the manifest
+const AVAILABLE_GENRES = Array.from(
+  new Set(
+    Object.values(COUNTRY_STREAMS_DB)
+      .flat()
+      .map(stream => stream.genre)
+      .filter(Boolean)
+  )
+).sort()
+
+// Update manifest with actual available genres
+manifest.catalogs[0].extra[0].options = [...AVAILABLE_GENRES, 'all']
+
+console.log(`✓ Available genres: ${AVAILABLE_GENRES.join(', ')}`)
 
 // Get streams for a country
 async function getStreamsForCountry(countryName) {
@@ -732,6 +750,58 @@ async function getStreamsForCountry(countryName) {
     console.error(`Error getting streams for ${countryName}:`, error.message)
     return []
   }
+}
+
+// Helper function to categorize streams by genre based on title
+function categorizeStreamGenre(stream) {
+  const title = (stream.title || '').toLowerCase()
+  
+  // News channels
+  if (/news|cnn|bbc|rtv|ntv|nbc|abc|cbs|dw|france 24|euronews|sky news|channel news/i.test(title)) {
+    return 'news'
+  }
+  
+  // Sports channels
+  if (/sport|sports|sky sport|espn|nba|nfl|uefa|fifa|nhl|mlb|afc|fox sport|bein sport|dazn/i.test(title)) {
+    return 'sports'
+  }
+  
+  // Music channels
+  if (/music|mtv|vevo|vh1|tmf|rtl 2|m tv|music box|kiss|capital|absolute/i.test(title)) {
+    return 'music'
+  }
+  
+  // Kids channels
+  if (/kids|cartoon|nickelodeon|disney|cbeebies|pbs kids|toon|anime|nick jr/i.test(title)) {
+    return 'kids'
+  }
+  
+  // Documentary channels
+  if (/documentary|bdoc|natgeo|nat geo|discovery|animal|history|bbc|nat wild/i.test(title)) {
+    return 'documentary'
+  }
+  
+  // Movies channels
+  if (/movie|movies|film|cinema|hbo|showtime|amc|fx|hulu|netflix/i.test(title)) {
+    return 'movies'
+  }
+  
+  // Default to general
+  return 'general'
+}
+
+// Enrich streams with genre information if missing
+function enrichStreamsWithGenre(database) {
+  const enriched = {}
+  
+  Object.entries(database).forEach(([country, streams]) => {
+    enriched[country] = streams.map(stream => ({
+      ...stream,
+      genre: stream.genre || categorizeStreamGenre(stream)
+    }))
+  })
+  
+  return enriched
 }
 
 // Get all available genres from database
