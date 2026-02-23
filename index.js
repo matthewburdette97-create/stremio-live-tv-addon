@@ -5,18 +5,23 @@ const path = require('path')
 // Declare the manifest
 const manifest = {
   id: "org.livetv.stremio.addon",
-  version: "1.0.0",
+  version: "1.1.0",
   catalogs: [
     {
       type: "tv",
       id: "countries",
       name: "Live TV by Country"
+    },
+    {
+      type: "tv",
+      id: "genres",
+      name: "Live TV by Genre"
     }
   ],
   resources: ["catalog", "stream", "meta"],
   types: ["tv"],
   name: "Live TV",
-  description: "2500+ live TV streams from countries worldwide"
+  description: "2500+ live TV streams from countries worldwide - browse by country or genre"
 }
 
 const builder = new addonBuilder(manifest)
@@ -718,6 +723,39 @@ async function getStreamsForCountry(countryName) {
   }
 }
 
+// Get all available genres from database
+function getAvailableGenres() {
+  const genres = new Set()
+  
+  Object.values(COUNTRY_STREAMS_DB).forEach(countryStreams => {
+    countryStreams.forEach(stream => {
+      if (stream.genre) {
+        genres.add(stream.genre)
+      }
+    })
+  })
+  
+  return Array.from(genres).sort()
+}
+
+// Get streams for a specific genre (across all countries)
+function getStreamsForGenre(genreName) {
+  const streams = []
+  
+  Object.entries(COUNTRY_STREAMS_DB).forEach(([country, countryStreams]) => {
+    countryStreams.forEach(stream => {
+      if (stream.genre === genreName) {
+        streams.push({
+          ...stream,
+          country: country
+        })
+      }
+    })
+  })
+  
+  return streams
+}
+
 // Handle catalog requests
 builder.defineCatalogHandler(async ({ type, id, extra }) => {
   console.log("Catalog request for", type, id)
@@ -754,6 +792,49 @@ builder.defineCatalogHandler(async ({ type, id, extra }) => {
     }
   }
   
+  if (type === "tv" && id === "genres") {
+    try {
+      const availableGenres = getAvailableGenres()
+      const genreEmojis = {
+        'sports': '⚽',
+        'news': '📰',
+        'music': '🎵',
+        'movies': '🎬',
+        'documentary': '🎥',
+        'kids': '👶',
+        'general': '📺'
+      }
+      
+      const metas = availableGenres.map((genreName) => {
+        const genreStreams = getStreamsForGenre(genreName)
+        let poster = null
+        
+        // Get a logo from first available stream in this genre
+        if (genreStreams.length > 0) {
+          for (const stream of genreStreams) {
+            if (stream.logo) {
+              poster = stream.logo
+              break
+            }
+          }
+        }
+        
+        return {
+          id: `genre_${genreName}`,
+          type: "tv",
+          name: `${genreEmojis[genreName] || '📺'} ${genreName.charAt(0).toUpperCase() + genreName.slice(1)}`,
+          poster: poster || `https://via.placeholder.com/350x500?text=${encodeURIComponent(genreName)}`
+        }
+      })
+      
+      console.log(`Returning ${metas.length} genres`)
+      return { metas }
+    } catch (error) {
+      console.error("Error in genre catalog handler:", error.message)
+      return { metas: [] }
+    }
+  }
+  
   return { metas: [] }
 })
 
@@ -779,6 +860,31 @@ builder.defineMetaHandler(async ({ type, id }) => {
     }
   }
   
+  // Extract genre from ID
+  const genreMatch = id.match(/genre_(.+)/)
+  if (genreMatch) {
+    const genreName = genreMatch[1]
+    const genreStreams = getStreamsForGenre(genreName)
+    const genreEmojis = {
+      'sports': '⚽',
+      'news': '📰',
+      'music': '🎵',
+      'movies': '🎬',
+      'documentary': '🎥',
+      'kids': '👶',
+      'general': '📺'
+    }
+    
+    return {
+      meta: {
+        id: id,
+        type: "tv",
+        name: `${genreEmojis[genreName] || '📺'} ${genreName.charAt(0).toUpperCase() + genreName.slice(1)}`,
+        description: `Live ${genreName} channels from around the world. ${genreStreams.length} channels available.`
+      }
+    }
+  }
+  
   return { meta: {} }
 })
 
@@ -797,6 +903,15 @@ builder.defineStreamHandler(async ({ type, id }) => {
       console.log(`Returning ${streams.length} streams for ${countryName}`)
       return { streams }
     }
+  }
+  
+  // Extract genre from ID
+  const genreMatch = id.match(/genre_(.+)/)
+  if (genreMatch) {
+    const genreName = genreMatch[1]
+    const streams = getStreamsForGenre(genreName)
+    console.log(`Returning ${streams.length} streams for genre: ${genreName}`)
+    return { streams }
   }
   
   return { streams: [] }
