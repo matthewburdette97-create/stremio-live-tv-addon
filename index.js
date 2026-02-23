@@ -10,7 +10,18 @@ const manifest = {
     {
       type: "tv",
       id: "countries",
-      name: "Live TV by Country"
+      name: "Live TV by Country",
+      extra: [
+        {
+          name: "genre",
+          isRequired: false,
+          options: ["sports", "news", "music", "movies", "documentary", "kids", "general", "all"]
+        },
+        {
+          name: "search",
+          isRequired: false
+        }
+      ]
     },
     {
       type: "tv",
@@ -758,11 +769,31 @@ function getStreamsForGenre(genreName) {
 
 // Handle catalog requests
 builder.defineCatalogHandler(async ({ type, id, extra }) => {
-  console.log("Catalog request for", type, id)
+  console.log("Catalog request for", type, id, "extra:", extra)
   
   if (type === "tv" && id === "countries") {
     try {
-      const metas = ALL_COUNTRIES.map((countryName, index) => {
+      const selectedGenre = extra?.genre ? extra.genre[0] : null
+      const searchQuery = extra?.search ? extra.search[0].toLowerCase() : null
+      
+      let countries = ALL_COUNTRIES
+      
+      // Filter by genre if selected
+      if (selectedGenre && selectedGenre !== "all") {
+        countries = countries.filter(countryName => {
+          const countryStreams = COUNTRY_STREAMS_DB[countryName] || []
+          return countryStreams.some(stream => stream.genre === selectedGenre)
+        })
+      }
+      
+      // Filter by search query if provided
+      if (searchQuery) {
+        countries = countries.filter(countryName => 
+          countryName.toLowerCase().includes(searchQuery)
+        )
+      }
+      
+      const metas = countries.map((countryName, index) => {
         // Try to get a logo from the first channel in this country
         let poster = null
         const countryStreams = COUNTRY_STREAMS_DB[countryName] || []
@@ -784,7 +815,7 @@ builder.defineCatalogHandler(async ({ type, id, extra }) => {
         }
       })
       
-      console.log(`Returning ${metas.length} countries`)
+      console.log(`Returning ${metas.length} countries (genre: ${selectedGenre || 'all'})`)
       return { metas }
     } catch (error) {
       console.error("Error in catalog handler:", error.message)
