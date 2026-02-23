@@ -36,15 +36,21 @@ function parseM3U(content, countryName) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
     
-    // M3U format: #EXTINF:-1,Channel Name
+    // M3U format: #EXTINF:-1 tvg-logo="URL" ...,Channel Name
     // next line: URL
     if (line.startsWith('#EXTINF')) {
       const nameMatch = line.match(/,(.+)$/);
       const title = nameMatch ? nameMatch[1].trim() : `Channel ${streams.length + 1}`;
       
+      // Extract logo URL if present
+      const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+      const logo = logoMatch ? logoMatch[1] : null;
+      
       const url = (lines[i + 1] || '').trim();
       if (url && url.startsWith('http')) {
-        streams.push({ title, url });
+        const stream = { title, url };
+        if (logo) stream.logo = logo;
+        streams.push(stream);
         i++; // Skip the URL line
       }
     }
