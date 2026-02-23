@@ -10442,5 +10442,11 @@
       "title": "SBS 6",
       "url": "https://live.sbs6.nl/sbs6.m3u8"
     }
+  ],
+  "North Korea": [
+    {
+      "title": "KCTV",
+      "url": "https://tor.koryo.tv/hls/pl/78efc3f10ca2ec33c5477b5e51d1e29b.m3u8"
+    }
   ]
 }
