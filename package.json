@@ -1,7 +1,7 @@
 {
-  "name": "stremio-famelack-addon",
+  "name": "stremio-live-tv-addon",
   "version": "1.0.0",
-  "description": "Famelack Live TV Stremio Add-on - 2500+ live TV streams from 12 countries",
+  "description": "Live TV Stremio Add-on - 2500+ live TV streams from 12 countries",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -21,11 +21,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthewburdette97-create/stremio-famelack-addon.git"
+    "url": "https://github.com/matthewburdette97-create/stremio-live-tv-addon.git"
   },
-  "homepage": "https://github.com/matthewburdette97-create/stremio-famelack-addon",
+  "homepage": "https://github.com/matthewburdette97-create/stremio-live-tv-addon",
   "bugs": {
-    "url": "https://github.com/matthewburdette97-create/stremio-famelack-addon/issues"
+    "url": "https://github.com/matthewburdette97-create/stremio-live-tv-addon/issues"
   },
   "dependencies": {
     "puppeteer": "^24.37.5",

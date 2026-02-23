@@ -4,19 +4,19 @@ const path = require('path')
 
 // Declare the manifest
 const manifest = {
-  id: "org.famelack.stremio.addon",
+  id: "org.livetv.stremio.addon",
   version: "1.0.0",
   catalogs: [
     {
       type: "tv",
-      id: "famelack_countries",
+      id: "countries",
       name: "Live TV by Country"
     }
   ],
   resources: ["catalog", "stream", "meta"],
   types: ["tv"],
-  name: "Famelack Live TV",
-  description: "Live TV streams from countries worldwide"
+  name: "Live TV",
+  description: "2500+ live TV streams from countries worldwide"
 }
 
 const builder = new addonBuilder(manifest)
@@ -722,7 +722,7 @@ async function getStreamsForCountry(countryName) {
 builder.defineCatalogHandler(async ({ type, id, extra }) => {
   console.log("Catalog request for", type, id)
   
-  if (type === "tv" && id === "famelack_countries") {
+  if (type === "tv" && id === "countries") {
     try {
       const metas = ALL_COUNTRIES.map((countryName, index) => ({
         id: `country_${index}`,

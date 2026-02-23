@@ -1,6 +1,6 @@
-# Famelack Live TV Stremio Add-on
+# Live TV Stremio Add-on
 
-A Stremio add-on that provides live TV streams organized by country.
+A Stremio add-on that provides live TV streams organized by country with 2500+ channels from 12 countries worldwide.
 
 ## Features
 
