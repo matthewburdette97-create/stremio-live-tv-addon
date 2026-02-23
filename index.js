@@ -1,4 +1,4 @@
-const { addonBuilder } = require("stremio-addon-sdk")
+const { addonBuilder, serveHTTP } = require("stremio-addon-sdk")
 const fs = require('fs')
 const path = require('path')
 
@@ -792,32 +792,14 @@ module.exports = builder.getInterface()
 
 // Also serve locally for development
 if (require.main === module) {
-  const express = require('express')
   const port = process.env.PORT || 7071
-  
-  console.log('[Start] Creating Express app')
-  const app = express()
+  console.log(`[Init] Starting on port ${port}`)
   
   try {
-    console.log('[SDK] Loading getRouter')
-    const { getRouter } = require("stremio-addon-sdk")
-    
-    console.log('[SDK] Getting addon interface')
-    const addonInterface = builder.getInterface()
-    
-    console.log('[SDK] Creating router')
-    const router = getRouter(addonInterface)
-    
-    console.log('[Mount] Mounting addon router')
-    app.use(router)
-    
-    console.log(`[Listen] Starting server on port ${port}`)
-    app.listen(port, () => {
-      console.log(`✓ Server listening on port ${port}`)
-    })
+    serveHTTP(builder.getInterface(), { port: port })
+    console.log(`✓ Addon running on port ${port}`)
   } catch (error) {
-    console.error('[ERROR] Failed to start:', error.message)
-    if (error.stack) console.error(error.stack)
+    console.error('[ERROR]:', error.message)
     process.exit(1)
   }
 }
