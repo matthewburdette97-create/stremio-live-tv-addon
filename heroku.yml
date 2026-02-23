@@ -1,6 +1,0 @@
-build:
-  languages:
-    - nodejs
-web:
-  processes:
-    web: node index.js

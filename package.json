@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
-    "extract": "node extract-streams.js",
     "scrape": "node scraper.js",
-    "fetch-streams": "node fetch-famelack-real.js"
+    "fetch-streams": "node fetch-famelack-real.js",
+    "validate-streams": "node validate-streams.js"
   },
   "keywords": [
     "stremio",

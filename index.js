@@ -917,19 +917,14 @@ builder.defineStreamHandler(async ({ type, id }) => {
   return { streams: [] }
 })
 
-// Export for Beamup hosting
-module.exports = builder.getInterface()
+// Start server
+const PORT = process.env.PORT || 7070
+const NODE_ENV = process.env.NODE_ENV || 'development'
 
-// Also serve locally for development
-if (require.main === module) {
-  const port = process.env.PORT || 7071
-  console.log(`[Init] Starting on port ${port}`)
-  
-  try {
-    serveHTTP(builder.getInterface(), { port: port })
-    console.log(`✓ Addon running on port ${port}`)
-  } catch (error) {
-    console.error('[ERROR]:', error.message)
-    process.exit(1)
-  }
+try {
+  serveHTTP(builder.getInterface(), { port: PORT })
+  console.log(`[${NODE_ENV}] Live TV Add-on listening on port ${PORT}`)
+} catch (error) {
+  console.error('[ERROR] Failed to start server:', error.message)
+  process.exit(1)
 }
