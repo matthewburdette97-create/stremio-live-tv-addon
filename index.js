@@ -675,20 +675,28 @@ let lastCacheUpdate = 0
 const CACHE_DURATION = 3600000 // 1 hour
 
 // Try to load scraped streams database, fallback to hardcoded
-let COUNTRY_STREAMS_DB = {}
+let COUNTRY_STREAMS_DB = DEFAULT_STREAMS  // Start with default
 
 try {
   const streamsDbPath = path.join(__dirname, 'streams-database.json')
+  console.log(`Checking for streams database at: ${streamsDbPath}`)
+  
   if (fs.existsSync(streamsDbPath)) {
-    COUNTRY_STREAMS_DB = JSON.parse(fs.readFileSync(streamsDbPath, 'utf8'))
+    const dbContent = fs.readFileSync(streamsDbPath, 'utf8')
+    COUNTRY_STREAMS_DB = JSON.parse(dbContent)
     console.log(`✓ Loaded ${Object.keys(COUNTRY_STREAMS_DB).length} countries from scraped database`)
   } else {
-    console.log('Note: No scraped database found. Using default streams.')
-    console.log('Run "npm run scrape" to fetch real streams from Famelack.com')
-    COUNTRY_STREAMS_DB = DEFAULT_STREAMS
+    console.log('Note: No scraped database found. Using default streams (with hardcoded country data)')
   }
 } catch (error) {
   console.error('Error loading streams database:', error.message)
+  console.log('Falling back to default hardcoded streams')
+  COUNTRY_STREAMS_DB = DEFAULT_STREAMS
+}
+
+// Ensure we have data
+if (!COUNTRY_STREAMS_DB || Object.keys(COUNTRY_STREAMS_DB).length === 0) {
+  console.warn('WARNING: No country streams loaded! Using default streams.')
   COUNTRY_STREAMS_DB = DEFAULT_STREAMS
 }
 
@@ -792,7 +800,16 @@ module.exports = builder.getInterface()
 
 // Also serve locally for development
 if (require.main === module) {
-  const port = process.env.PORT || 7071
-  serveHTTP(builder.getInterface(), { port: port })
-  console.log(`Stremio add-on is running on http://localhost:${port}/manifest.json`)
+  try {
+    const port = process.env.PORT || 7071
+    console.log(`Starting Stremio add-on server on port ${port}...`)
+    
+    const addon = builder.getInterface()
+    serveHTTP(addon, { port: port })
+    
+    console.log(`✓ Stremio add-on is running on http://localhost:${port}/manifest.json`)
+  } catch (error) {
+    console.error('Fatal error starting server:', error)
+    process.exit(1)
+  }
 }
