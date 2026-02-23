@@ -10404,5 +10404,43 @@
       "title": "Югра",
       "url": "https://live-ugratv.cdnvideo.ru/ugratv/ugratv/playlist.m3u8"
     }
+  ],
+  "China": [
+    {
+      "title": "CCTV 1",
+      "url": "https://live.cctv.com/cctv1.m3u8"
+    },
+    {
+      "title": "CCTV 2",
+      "url": "https://live.cctv.com/cctv2.m3u8"
+    },
+    {
+      "title": "CCTV News",
+      "url": "https://live.cctv.com/cctv-news.m3u8"
+    }
+  ],
+  "Iran": [
+    {
+      "title": "IRIB TV 1",
+      "url": "https://live.irib.ir/tv1.m3u8"
+    },
+    {
+      "title": "IRIB TV 3",
+      "url": "https://live.irib.ir/tv3.m3u8"
+    }
+  ],
+  "Netherlands": [
+    {
+      "title": "NPO 1",
+      "url": "https://live.npoplus.nl/npo1.m3u8"
+    },
+    {
+      "title": "RTL 4",
+      "url": "https://live.rtl.nl/rtl4.m3u8"
+    },
+    {
+      "title": "SBS 6",
+      "url": "https://live.sbs6.nl/sbs6.m3u8"
+    }
   ]
 }
