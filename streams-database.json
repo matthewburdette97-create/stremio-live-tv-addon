@@ -3811,6 +3811,18 @@
       "genre": "general"
     },
     {
+      "title": "CCTV-1 (2160p)",
+      "url": "http://123.175.209.52:9003/hls/1/index.m3u8",
+      "logo": "https://i.imgur.com/gBbLyqh.png",
+      "genre": "general"
+    },
+    {
+      "title": "CCTV-2 (2160p)",
+      "url": "http://123.175.209.52:9003/hls/2/index.m3u8",
+      "logo": "https://i.imgur.com/gBbLyqh.png",
+      "genre": "general"
+    },
+    {
       "title": "CCTV+ 1",
       "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8",
       "logo": "https://i.imgur.com/U8d4Is6.png",
