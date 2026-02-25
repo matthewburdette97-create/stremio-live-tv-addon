@@ -28089,6 +28089,12 @@
   ],
   "South Korea": [
     {
+      "title": "KBS",
+      "url": "https://nl.utako.moe/kbs/tracks-v1a1/mono.m3u8",
+      "logo": "https://i.imgur.com/m8D9nJ2.png",
+      "genre": "general"
+    },
+    {
       "title": "Arirang Radio",
       "url": "http://amdlive-ch02.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8",
       "logo": "https://i.imgur.com/dtfiG9k.png",

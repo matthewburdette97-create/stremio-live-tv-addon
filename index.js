@@ -567,6 +567,7 @@ const DEFAULT_STREAMS = {
   ],
   'South Korea': [
     { title: 'KBS', url: 'https://live.kbs.co.kr/kbs.m3u8' },
+    { title: 'KBS', url: 'https://nl.utako.moe/kbs/tracks-v1a1/mono.m3u8' },
     { title: 'SBS', url: 'https://live.sbs.co.kr/sbs.m3u8' }
   ],
   'South Sudan': [
