@@ -41375,6 +41375,12 @@
       "url": "https://krmadt.lls.pbs.org/out/v1/239e3afea2ad4574a112bd5d8c717353/dash-drm_audio_3_0_7261549.mp4",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rocky_Mountain_Public_Broadcasting_Network_2010.svg/1200px-Rocky_Mountain_Public_Broadcasting_Network_2010.svg.png",
       "genre": "general"
+    },
+    {
+      "title": "Denver Community Media",
+      "url": "https://dlttx48mxf9m3.cloudfront.net/vod_clients/denver-community-media/live/ch1/video.m3u8",
+      "logo": "https://www.denvercommunity.org/web/images/dcmedia_logo_small.png",
+      "genre": "general"
     }
   ],
   "Uruguay": [
