@@ -329,7 +329,8 @@ const DEFAULT_STREAMS = {
     { title: 'ショップチャンネル', url: 'https://stream3.shopch.jp/HLS/master.m3u8' },
     { title: 'NHK WORLD JAPAN', url: 'https://master.nhkworld.jp/nhkworld-tv/playlist/live.m3u8' },
     { title: 'ウェザーニュースLiVE', url: 'https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1dae10df8431a84d21/index.m3u8' },
-    { title: 'TOKYO MX チャンネル', url: 'https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-rakutenjp/playlist.m3u8' }
+    { title: 'TOKYO MX チャンネル', url: 'https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-rakutenjp/playlist.m3u8' },
+    { title: 'J SPORTS 1', url: 'https://nl.utako.moe/js1/tracks-v1a1/mono.m3u8' }
   ],
   'Jordan': [
     { title: 'JTV', url: 'https://live.jtv.gov.jo/jtv.m3u8' }
