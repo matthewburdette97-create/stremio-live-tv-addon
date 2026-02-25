@@ -1,0 +1,535 @@
+{
+  "totalStreams": 61,
+  "tested": 61,
+  "working": 14,
+  "clientErrors": 0,
+  "serverErrors": 0,
+  "timeout": 0,
+  "errors": 47,
+  "streams": [
+    {
+      "title": "CGNTV Japan",
+      "genre": "general",
+      "url": "https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGN...",
+      "status": "working",
+      "responseTime": 323,
+      "code": 200
+    },
+    {
+      "title": "NHK World-Japan HD",
+      "genre": "general",
+      "url": "https://nhk.lls.pbs.org/index.m3u8...",
+      "status": "working",
+      "responseTime": 313,
+      "code": 200
+    },
+    {
+      "title": "NHK World-Japan",
+      "genre": "general",
+      "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/jp/NHK_StreamOrchestrato...",
+      "status": "working",
+      "responseTime": 186,
+      "code": 200
+    },
+    {
+      "title": "NHK World-Japan",
+      "genre": "general",
+      "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8...",
+      "status": "working",
+      "responseTime": 826,
+      "code": 200
+    },
+    {
+      "title": "NHK World-Japan",
+      "genre": "general",
+      "url": "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8...",
+      "status": "working",
+      "responseTime": 826,
+      "code": 200
+    },
+    {
+      "title": "NHK World-Japan",
+      "genre": "general",
+      "url": "https://cdn4.skygo.mn/live/disk1/NHK_World/HLSv3-FTA/NHK_World.m3u8...",
+      "status": "working",
+      "responseTime": 758,
+      "code": 200
+    },
+    {
+      "title": "NHK World Premium",
+      "genre": "general",
+      "url": "https://cdn.skygo.mn/live/disk1/NHK_World_Premium/HLSv3-FTA/NHK_World_Premium.m3...",
+      "status": "working",
+      "responseTime": 784,
+      "code": 302
+    },
+    {
+      "title": "QVC Japan",
+      "genre": "general",
+      "url": "https://cdn-live1.qvc.jp/iPhone/1501/1501.m3u8...",
+      "status": "working",
+      "responseTime": 1093,
+      "code": 200
+    },
+    {
+      "title": "Shop Channel",
+      "genre": "general",
+      "url": "https://stream3.shopch.jp/HLS/master.m3u8...",
+      "status": "working",
+      "responseTime": 741,
+      "code": 200
+    },
+    {
+      "title": "NHK Kishou-Saigai",
+      "genre": "general",
+      "url": "https://newssimul-stream.nhk.jp/hls/live/2010561/nhknewssimul/master.m3u8...",
+      "status": "working",
+      "responseTime": 1712,
+      "code": 200
+    },
+    {
+      "title": "NHK総合 (東京)",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS291&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 8,
+      "code": null
+    },
+    {
+      "title": "NHK Eテレ（東京）",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS292&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 6,
+      "code": null
+    },
+    {
+      "title": "日本テレビ",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS294&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 7,
+      "code": null
+    },
+    {
+      "title": "テレビ朝日",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS295&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 6,
+      "code": null
+    },
+    {
+      "title": "TBSテレビ",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS296&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 6,
+      "code": null
+    },
+    {
+      "title": "テレビ東京",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS297&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 5,
+      "code": null
+    },
+    {
+      "title": "フジテレビ",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS298&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 4,
+      "code": null
+    },
+    {
+      "title": "NHK BS",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS101&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "NHK BSP4K",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS103&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "BS日テレ",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS141&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "BS朝日",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS151&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "BS-TBS",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS161&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "BSテレ東",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS171&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "BSフジ",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS181&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "WOWOWプライム",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS191&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "WOWOWライブ",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS192&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "WOWOWシネマ",
+      "genre": "movies",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS193&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "BS10",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS263&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "BS10スターチャンネル",
+      "genre": "movies",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS200&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "アニマックス",
+      "genre": "kids",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS236&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "J SPORTS 1",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS242&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "J SPORTS 2",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS243&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "J SPORTS 3",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS244&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "J SPORTS 4",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS245&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "釣りビジョン",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS251&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "日本映画専門チャンネル",
+      "genre": "movies",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS255&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "ショップチャンネル",
+      "genre": "general",
+      "url": "https://stream3.shopch.jp/HLS/master.m3u8...",
+      "status": "working",
+      "responseTime": 65,
+      "code": 200
+    },
+    {
+      "title": "東映チャンネル",
+      "genre": "movies",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS218&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "チャンネルNECO",
+      "genre": "movies",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS223&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "ムービープラス",
+      "genre": "movies",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS240&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "GAORA",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS254&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "日テレジータス",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS257&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "ゴルフネットワーク",
+      "genre": "sports",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS262&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "時代劇専門チャンネル",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS292&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "ファミリー劇場",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS293&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 3,
+      "code": null
+    },
+    {
+      "title": "ホームドラマチャンネル",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS294&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "チャンネル銀河",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS305&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "スーパー！ドラマTV",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS310&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "アクションチャンネル",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS311&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "Dlife",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS312&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "LaLa TV",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS314&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "Mnet",
+      "genre": "music",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=BS241&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "Music ON TV!（エムオン）",
+      "genre": "music",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS325&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "歌謡ポップスチャンネル",
+      "genre": "music",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS329&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "キッズステーション",
+      "genre": "kids",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS330&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "日テレNEWS24",
+      "genre": "news",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS349&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 2,
+      "code": null
+    },
+    {
+      "title": "囲碁・将棋チャンネル",
+      "genre": "general",
+      "url": "https://stream01.willfonk.com/live_playlist.m3u8?cid=CS363&r=FHD&ccode=JP&m=d0:2...",
+      "status": "error",
+      "responseTime": 1,
+      "code": null
+    },
+    {
+      "title": "GSTV",
+      "genre": "general",
+      "url": "https://gstv-tnz-gsmediastreaming.preview-jpea.channel.media.azure.net/dfd06b62-...",
+      "status": "error",
+      "responseTime": 36,
+      "code": null
+    },
+    {
+      "title": "NHK WORLD JAPAN",
+      "genre": "general",
+      "url": "https://master.nhkworld.jp/nhkworld-tv/playlist/live.m3u8...",
+      "status": "working",
+      "responseTime": 640,
+      "code": 200
+    },
+    {
+      "title": "ウェザーニュースLiVE",
+      "genre": "news",
+      "url": "https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1da...",
+      "status": "working",
+      "responseTime": 886,
+      "code": 200
+    },
+    {
+      "title": "TOKYO MX チャンネル",
+      "genre": "general",
+      "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-r...",
+      "status": "working",
+      "responseTime": 310,
+      "code": 200
+    }
+  ],
+  "summary": {
+    "workingPercent": 23,
+    "avgResponseTime": 676,
+    "maxResponseTime": 1712,
+    "minResponseTime": 65,
+    "byGenre": {
+      "general": {
+        "total": 39,
+        "working": 13
+      },
+      "sports": {
+        "total": 9,
+        "working": 0
+      },
+      "movies": {
+        "total": 6,
+        "working": 0
+      },
+      "kids": {
+        "total": 2,
+        "working": 0
+      },
+      "music": {
+        "total": 3,
+        "working": 0
+      },
+      "news": {
+        "total": 2,
+        "working": 1
+      }
+    },
+    "byStatus": {
+      "working": 14,
+      "error": 47
+    }
+  }
+}
