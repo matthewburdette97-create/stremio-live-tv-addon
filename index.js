@@ -681,7 +681,9 @@ const DEFAULT_STREAMS = {
     { title: 'BBC Home', url: 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5836fe745b600070fc743/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel' },
     { title: 'PBS12', url: 'https://kbdidt.lls.pbs.org/out/v1/efac0b195304474695a6779fc03051a9/dash-drm.mpd' },
     { title: 'RMPBS', url: 'https://krmadt.lls.pbs.org/out/v1/239e3afea2ad4574a112bd5d8c717353/dash-drm_audio_3_0_7261549.mp4' },
-    { title: 'Denver Community Media', url: 'https://dlttx48mxf9m3.cloudfront.net/vod_clients/denver-community-media/live/ch1/video.m3u8' }
+    { title: 'Denver Community Media', url: 'https://dlttx48mxf9m3.cloudfront.net/vod_clients/denver-community-media/live/ch1/video.m3u8' },
+    { title: 'WISHTV8', url: 'https://fuel-streaming-prod01.fuelmedia.io/v1/sep/4fbed965-addf-46f6-8d1b-502201ca1d84/b1370abc-f53b-4903-ab00-540982f4c90b/6S3500K720AWS/SM/content.m3u8' },
+    { title: 'Denver7', url: 'https://content-auso1.uplynk.com/channel/4608c2dc86a14e3db517ef7e5042a915/e.m3u8?v=2&ad=live&expand=ad_live&repl=aboi&ad.url=https://www.denver7.com/&ad.us_privacy=1YNN&ad.gpp=DBABJg~BVoAAIA.QA&ad.gpp_sid=10&ad.cust_params=&inv=ss: on-domain: ew scripps: kmgh: desktop: unknown: web: live&user_id=undefined&pxconfig=web-live&pbs=ed8416cec9e54de38045a75bde82427a' }
   ],
   'Uruguay': [
     { title: 'Canal 3', url: 'https://live.canal3.com.uy/canal3.m3u8' },
