@@ -17373,6 +17373,12 @@
       "url": "https://nl.utako.moe/musicon/tracks-v1a1/mono.m3u8",
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiX5vJ2wL3pO4qR5sT6uV7wX8yZ9aB0cD1eF&s",
       "genre": "music"
+    },
+    {
+      "title": "Sky A",
+      "url": "https://nl.utako.moe/skya/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjX6vK3xM4qP5rS6tU7vW8xY9zZ0aB1cD2eE&s",
+      "genre": "sports"
     }
   ],
   "Jordan": [
