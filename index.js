@@ -334,7 +334,8 @@ const DEFAULT_STREAMS = {
     { title: 'Channel Ginga', url: 'https://nl.utako.moe/gingach/tracks-v1a1/mono.m3u8' },
     { title: 'Fighting TV', url: 'https://nl.utako.moe/fighting_tv/tracks-v1a1/mono.m3u8' },
     { title: 'Fuji Next', url: 'https://nl.utako.moe/fuji_next/tracks-v1a1/mono.m3u8' },
-    { title: 'EX Ch2', url: 'https://nl.utako.moe/ex_ch2/tracks-v1a1/mono.m3u8' }
+    { title: 'EX Ch2', url: 'https://nl.utako.moe/ex_ch2/tracks-v1a1/mono.m3u8' },
+    { title: 'Music On', url: 'https://nl.utako.moe/musicon/tracks-v1a1/mono.m3u8' }
   ],
   'Jordan': [
     { title: 'JTV', url: 'https://live.jtv.gov.jo/jtv.m3u8' }
