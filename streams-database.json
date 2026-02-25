@@ -41393,6 +41393,12 @@
       "url": "https://content-auso1.uplynk.com/channel/4608c2dc86a14e3db517ef7e5042a915/e.m3u8?v=2&ad=live&expand=ad_live&repl=aboi&ad.url=https://www.denver7.com/&ad.us_privacy=1YNN&ad.gpp=DBABJg~BVoAAIA.QA&ad.gpp_sid=10&ad.cust_params=&inv=ss: on-domain: ew scripps: kmgh: desktop: unknown: web: live&user_id=undefined&pxconfig=web-live&pbs=ed8416cec9e54de38045a75bde82427a",
       "logo": "https://www.denver7.com/static/images/logos/denver7-logo.png",
       "genre": "general"
+    },
+    {
+      "title": "KOAA News",
+      "url": "https://content-auso1.uplynk.com/channel/f1c79bdf896549aeb29440da7386fe6c/e.m3u8?v=2&ad=live&expand=ad_live&repl=aboi&ad.url=https://www.koaa.com/&ad.us_privacy=1YNN&ad.gpp=DBABJg~BVoAAIA.QA&ad.gpp_sid=10&ad.cust_params=&inv=ss: on-domain: ew scripps: koaa: desktop: unknown: web: live&user_id=undefined&pxconfig=web-live&pbs=fde6709f2f4443a6af17f0f0c4098129",
+      "logo": "https://www.koaa.com/static/images/logos/koaa-logo.png",
+      "genre": "news"
     }
   ],
   "Uruguay": [

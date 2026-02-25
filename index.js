@@ -683,7 +683,8 @@ const DEFAULT_STREAMS = {
     { title: 'RMPBS', url: 'https://krmadt.lls.pbs.org/out/v1/239e3afea2ad4574a112bd5d8c717353/dash-drm_audio_3_0_7261549.mp4' },
     { title: 'Denver Community Media', url: 'https://dlttx48mxf9m3.cloudfront.net/vod_clients/denver-community-media/live/ch1/video.m3u8' },
     { title: 'WISHTV8', url: 'https://fuel-streaming-prod01.fuelmedia.io/v1/sep/4fbed965-addf-46f6-8d1b-502201ca1d84/b1370abc-f53b-4903-ab00-540982f4c90b/6S3500K720AWS/SM/content.m3u8' },
-    { title: 'Denver7', url: 'https://content-auso1.uplynk.com/channel/4608c2dc86a14e3db517ef7e5042a915/e.m3u8?v=2&ad=live&expand=ad_live&repl=aboi&ad.url=https://www.denver7.com/&ad.us_privacy=1YNN&ad.gpp=DBABJg~BVoAAIA.QA&ad.gpp_sid=10&ad.cust_params=&inv=ss: on-domain: ew scripps: kmgh: desktop: unknown: web: live&user_id=undefined&pxconfig=web-live&pbs=ed8416cec9e54de38045a75bde82427a' }
+    { title: 'Denver7', url: 'https://content-auso1.uplynk.com/channel/4608c2dc86a14e3db517ef7e5042a915/e.m3u8?v=2&ad=live&expand=ad_live&repl=aboi&ad.url=https://www.denver7.com/&ad.us_privacy=1YNN&ad.gpp=DBABJg~BVoAAIA.QA&ad.gpp_sid=10&ad.cust_params=&inv=ss: on-domain: ew scripps: kmgh: desktop: unknown: web: live&user_id=undefined&pxconfig=web-live&pbs=ed8416cec9e54de38045a75bde82427a' },
+    { title: 'KOAA News', url: 'https://content-auso1.uplynk.com/channel/f1c79bdf896549aeb29440da7386fe6c/e.m3u8?v=2&ad=live&expand=ad_live&repl=aboi&ad.url=https://www.koaa.com/&ad.us_privacy=1YNN&ad.gpp=DBABJg~BVoAAIA.QA&ad.gpp_sid=10&ad.cust_params=&inv=ss: on-domain: ew scripps: koaa: desktop: unknown: web: live&user_id=undefined&pxconfig=web-live&pbs=fde6709f2f4443a6af17f0f0c4098129' }
   ],
   'Uruguay': [
     { title: 'Canal 3', url: 'https://live.canal3.com.uy/canal3.m3u8' },
