@@ -8,7 +8,9 @@
     "dev": "node index.js",
     "scrape": "node scraper.js",
     "fetch-streams": "node fetch-famelack-real.js",
-    "validate-streams": "node validate-streams.js"
+    "validate-streams": "node validate-streams.js",
+    "validate-japan": "node validate-japan-streams.js",
+    "versioning": "node stream-versioning.js"
   },
   "keywords": [
     "stremio",
