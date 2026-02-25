@@ -2709,6 +2709,12 @@
       "genre": "general"
     },
     {
+      "title": "NBA TV Canada",
+      "url": "https://stream2.pivotalelements.com/memfs/2d2e1038-9eb2-44df-a9b9-109de5752f3b_output_0.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/NBA_TV_Canada_logo.svg/1200px-NBA_TV_Canada_logo.svg.png",
+      "genre": "sports"
+    },
+    {
       "title": "Dukh Nivaran",
       "url": "http://cdn12.henico.net:8080/live/dncal/index.m3u8",
       "logo": "https://i.imgur.com/Zh60l1x.png",

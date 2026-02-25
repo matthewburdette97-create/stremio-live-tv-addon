@@ -162,7 +162,8 @@ const DEFAULT_STREAMS = {
     { title: 'CBC', url: 'https://live.cbc.ca/cbc.m3u8' },
     { title: 'CTV', url: 'https://live.ctv.ca/ctv.m3u8' },
     { title: 'Global News', url: 'https://live.globalnews.ca/globalnews.m3u8' },
-    { title: 'CityTV', url: 'https://live.citytv.com/citytv.m3u8' }
+    { title: 'CityTV', url: 'https://live.citytv.com/citytv.m3u8' },
+    { title: 'NBA TV Canada', url: 'https://stream2.pivotalelements.com/memfs/2d2e1038-9eb2-44df-a9b9-109de5752f3b_output_0.m3u8' }
   ],
   'Chad': [
     { title: 'TN Chad', url: 'https://live.tnchad.com/tnchad.m3u8' }
