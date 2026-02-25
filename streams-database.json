@@ -17379,6 +17379,18 @@
       "url": "https://nl.utako.moe/skya/tracks-v1a1/mono.m3u8",
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjX6vK3xM4qP5rS6tU7vW8xY9zZ0aB1cD2eE&s",
       "genre": "sports"
+    },
+    {
+      "title": "Kansai TV",
+      "url": "https://nl.utako.moe/kansaitv/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkX7wL4yN5rQ6sS7tU8vV9xW0yZ1aB2cD3eF&s",
+      "genre": "general"
+    },
+    {
+      "title": "Fuji TV",
+      "url": "https://nl.utako.moe/Fuji_TV/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlX8xM5zO6sR7tU8vV9xW0yX1zZ2aB3cD4eG&s",
+      "genre": "general"
     }
   ],
   "Jordan": [
