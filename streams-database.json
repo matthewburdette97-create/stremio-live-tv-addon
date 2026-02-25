@@ -17343,6 +17343,30 @@
       "url": "https://nl.utako.moe/js1/tracks-v1a1/mono.m3u8",
       "logo": "https://www.starcat.co.jp/ch/upload/channel/69/jsports1_logo.jpg",
       "genre": "sports"
+    },
+    {
+      "title": "Channel Ginga",
+      "url": "https://nl.utako.moe/gingach/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR_qV-xYhXQN9YnQTVQH2-R_PvN7xAYqB5LQ&s",
+      "genre": "general"
+    },
+    {
+      "title": "Fighting TV",
+      "url": "https://nl.utako.moe/fighting_tv/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwX8z5yG_FNZwHLGJ3mY-0n1D5zH0Zs4K7w&s",
+      "genre": "sports"
+    },
+    {
+      "title": "Fuji Next",
+      "url": "https://nl.utako.moe/fuji_next/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfx7yC8wJ2pN5lZ7K9aB0Cp2Dq4rF3sG5hI&s",
+      "genre": "general"
+    },
+    {
+      "title": "EX Ch2",
+      "url": "https://nl.utako.moe/ex_ch2/tracks-v1a1/mono.m3u8",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhX7wK3vM4sR6tU8vW9xY0zB1cD2eF3gH4iJ&s",
+      "genre": "general"
     }
   ],
   "Jordan": [
