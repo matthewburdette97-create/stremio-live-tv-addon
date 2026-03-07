@@ -253,7 +253,110 @@ To find actual working streams for a country:
 - [Stremio Add-on SDK Documentation](https://docs.stremio.com/)
 - [Stremio Protocol Specification](https://github.com/Stremio/stremio-addon-sdk/blob/master/docs/protocol.md)
 
+## Self-Hosting
+
+This add-on is designed for self-hosting on your own machine or server.
+
+### Local Setup
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the add-on:
+   ```bash
+   npm start
+   ```
+
+3. Add to Stremio by installing the add-on with this manifest URL:
+   ```
+   http://localhost:7070/manifest.json
+   ```
+
+### Remote Hosting
+
+To access the add-on from devices on your network or across the internet:
+
+1. **Find your machine's IP address:**
+   - On macOS/Linux: `ipconfig getifaddr en0` or `hostname -I`
+   - On Windows: `ipconfig` (look for IPv4 Address)
+
+2. **Update the manifest URL in Stremio:**
+   - Replace `localhost` with your machine's IP address:
+   ```
+   http://YOUR_IP_ADDRESS:7070/manifest.json
+   ```
+
+3. **Configure port forwarding (for internet access):**
+   - Forward port 7070 on your router to your machine
+   - Update firewall settings to allow port 7070
+
+### Environment Variables
+
+The add-on respects the following environment variables:
+
+```bash
+PORT=7070          # Change the port (default: 7070)
+NODE_ENV=development  # Set environment (development or production)
+```
+
+Example:
+```bash
+PORT=8080 npm start
+```
+
+## Cloud Hosting with Beamup
+
+For always-on hosting without maintaining your own server, deploy to **Beamup** - the official Stremio add-on PaaS platform.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) installed locally
+- A GitHub account with an SSH key added to your profile
+- Git installed and the repository initialized
+
+### Quick Deploy
+
+1. **Install Beamup CLI:**
+   ```bash
+   npm install beamup-cli -g
+   ```
+
+2. **From your project directory, run:**
+   ```bash
+   beamup
+   ```
+
+3. **On first run, Beamup will ask:**
+   - **Host:** `a.baby-beamup.club`
+   - **GitHub username:** Your GitHub username
+
+4. **Follow the prompts** to authenticate with GitHub and deploy
+
+### Manage Deployment
+
+```bash
+# View deployment logs
+beamup logs
+
+# Set environment variables
+beamup secrets PORT 7070
+beamup secrets NODE_ENV production
+
+# Delete the deployment
+beamup delete
+```
+
+### How It Works
+
+- Beamup uses your GitHub credentials to authenticate
+- Your add-on is pushed to the Beamup platform and starts automatically
+- You get a unique public URL to use in Stremio
+- The add-on stays online 24/7 without requiring your machine to be powered on
+
+This is the recommended option for production deployments and sharing with other Stremio users.
+
 ## License
 
 MIT
-# Render rebuilt at Sun Feb 22 22:58:05 MST 2026
